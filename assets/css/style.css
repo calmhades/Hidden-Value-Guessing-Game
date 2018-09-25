@@ -1,0 +1,35 @@
+.container {
+    
+    border-radius: .25rem;
+}
+.box {
+        text-align: center;
+        font-size: 30pt;
+        color: white;
+        height: 150px;
+        width: 150px;
+        margin: 40px;
+        border-radius: .75rem;
+        padding-top: 40px;
+        border: 2px;
+        border-color: black
+        
+      }
+
+.upper {
+        text-align: center;
+        font-size: 30pt;
+        color: white;
+        height: 150px;
+        width: 150px;
+        margin: 10px 40px 40px 40px;
+        border-radius: .75rem;
+        padding-top: 40px;
+}
+    
+
+
+.col {
+        align-items: center;
+        
+      }
