@@ -1,3 +1,4 @@
+    // resetColor = function{
 var randomBg = []
 for ( var i = 0 ; i < 5 ; i++ ) {
     var x = Math.floor(Math.random() * 256);
@@ -11,7 +12,8 @@ for ( var i = 0 ; i < 5 ; i++ ) {
     $("#b6").css("background-color", randomBg[1]);
     $("#b7").css("background-color", randomBg[2]);
     $("#b8").css("background-color", randomBg[3]);
-
+    
+// resetColor()    
 // beginning variables
 var totalWins = 0
 var totalLosses = 0
@@ -28,17 +30,18 @@ var counter = 0
 $("#u3").text(counter);
 
 // random values for lower boxes
-var one = Math.round(Math.random()*12);
-var two = Math.round(Math.random()*12);
-var three = Math.round(Math.random()*12);
-var four = Math.round(Math.random()*12);
-
+    resetRandom = function() {
+var one = Math.ceil(Math.random()*12);
+var two = Math.ceil(Math.random()*12);
+var three = Math.ceil(Math.random()*12);
+var four = Math.ceil(Math.random()*12);
 // assigning values to boxes
 $("#b5").attr("dataValue", one)
 $("#b6").attr("dataValue", two)
 $("#b7").attr("dataValue", three)
 $("#b8").attr("dataValue", four)
-
+    }
+resetRandom()
 // clicking a box gives you a value in #u1 and adds to the counter.  When they match the target value, the square turns green, when they go over it turns red.
 $(document).on("click", ".box", function() {
     $("#u3").css("background-color", "orange");
@@ -66,6 +69,7 @@ $(document).on("click", ".box", function() {
             $("#b6").css("background-color", randomBg[1]);
             $("#b7").css("background-color", randomBg[2]);
             $("#b8").css("background-color", randomBg[3]);
+            resetRandom()
     }
     else if (counter >= targetNumber) {
         
@@ -85,28 +89,21 @@ $(document).on("click", ".box", function() {
             $("#b6").css("background-color", randomBg[1]);
             $("#b7").css("background-color", randomBg[2]);
             $("#b8").css("background-color", randomBg[3]);
+            resetRandom()
     }
     $("#u2").text(totalWins + "/" + totalLosses);
-    
+    // if (totalWins = totalLosses) {
+    // $("#u2").css("background-color", "orange");
+    // }
+    // else if (totalWins > totalLosses)  {
+    //     $("#u2").css("background-color", "green");
+    // }
+    // else $("#u2").css("background-color", "red");
     
 
     
 })
 
 
-// for ( var i = 0 ; i < 5 ; i++ ) {
-//         var x = Math.floor(Math.random() * 256);
-//         var y = Math.floor(Math.random() * 256);
-//         var z = Math.floor(Math.random() * 256);
-//         var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-//         var randomBg = []
-//         randomBg.push(bgColor);
-//         console.log(randomBg);
-//         $("#b1").css("background-color", randomBg[0])
-//         $("#b2").css("background-color", randomBg[1])
-//         $("#b3").css("background-color", randomBg[2])
-//         $("#b4").css("background-color", randomBg[4])
-
-//     }
 
 
